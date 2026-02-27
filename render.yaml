@@ -9,21 +9,16 @@ services:
       - key: N8N_ENCRYPTION_KEY
         generateValue: true
       
-      # Tell n8n to use Postgres
       - key: DB_TYPE
         value: postgresdb
         
-      # Database Port (Neon uses the standard Postgres port)
       - key: DB_POSTGRESDB_PORT
         value: "5432"
 
-      # Neon requires SSL for all external connections
-      - key: DB_POSTGRESDB_SSL
+      # FIXED: The correct variable to enforce SSL for Neon
+      - key: DB_POSTGRESDB_SSL_ENABLED
         value: "true"
 
-      # The following variables are set to 'sync: false'.
-      # You will enter their actual values securely in the 
-      # Render Dashboard when you deploy.
       - key: DB_POSTGRESDB_HOST
         sync: false
       - key: DB_POSTGRESDB_DATABASE
