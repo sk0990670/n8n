@@ -8,22 +8,19 @@ services:
     envVars:
       - key: N8N_ENCRYPTION_KEY
         generateValue: true
-      
       - key: DB_TYPE
         value: postgresdb
-        
       - key: DB_POSTGRESDB_PORT
         value: "5432"
-
-      # FIXED: The correct variable to enforce SSL for Neon
       - key: DB_POSTGRESDB_SSL_ENABLED
         value: "true"
-
       - key: DB_POSTGRESDB_HOST
-        sync: false
+        value: "ep-plain-snow-aomcju7h-pooler.c-2.ap-southeast-1.aws.neon.tech"
       - key: DB_POSTGRESDB_DATABASE
-        sync: false
+        value: "neondb"
       - key: DB_POSTGRESDB_USER
-        sync: false
+        value: "neondb_owner"
       - key: DB_POSTGRESDB_PASSWORD
-        sync: false
+        sync: false # Render will ask you for this value securely in the dashboard
+      - key: WEBHOOK_URL
+        value: "https://n8n-service.onrender.com" # Replace with your actual Render URL
