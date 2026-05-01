@@ -5,8 +5,8 @@ ENV N8N_PORT=5678
 ENV NODE_ENV=production
 
 # URLs (Railway will auto assign domain)
-WEBHOOK_URL=https://n8n-service-production-4be9.up.railway.app
-N8N_EDITOR_BASE_URL=https://n8n-service-production-4be9.up.railway.app
+ENV WEBHOOK_URL=https://n8n-service-production-4be9.up.railway.app
+ENV N8N_EDITOR_BASE_URL=https://n8n-service-production-4be9.up.railway.app
 
 ENV GENERIC_TIMEZONE=Asia/Kolkata
 
