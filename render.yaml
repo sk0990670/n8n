@@ -22,5 +22,4 @@ services:
         value: "neondb_owner"
       - key: DB_POSTGRESDB_PASSWORD
         sync: false # Render will ask you for this value securely in the dashboard
-      - key: WEBHOOK_URL
-        value: "[https://n8n-service-bi7z.onrender.com](https://n8n-service-bi7z.onrender.com)" # Replace with your actual Render URL
+
